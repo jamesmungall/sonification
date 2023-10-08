@@ -1,5 +1,5 @@
 ## SOLAR SOUNDS Space-Apps 2023, Exeter
-**Trevor Sharp, Amelia Sharp, James Mungall, Benjy Mungal, Jasmin Appleby-Holdham, Cerise Abel-Thompson**
+**Trevor Sharp, Amelia Sharp, James Mungall, Benjy Mungall, Jasmin Appleby-Holdham, Cerise Abel-Thompson**
 
 ### This project consists of three seperate parts that all take nasa data and interpret it in varying audio/visual formats. 
 The aim was to present ways that we could diversify data interpretation and bring it to life in new ways that focused on accessibilty. For example we thought about people who are visually impared and how we could use different aspects of the resources we had to create different ways of experiencing images taken of the sun. 
