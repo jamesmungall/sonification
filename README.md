@@ -10,4 +10,4 @@ The aim was to present ways that we could diversify data interpretation and brin
 
 * A solar sonification pipeline that takes whole images of the sun and creates a small piece of music based on the pixel intensity data of the whole image.  (Histogram creation tool and Suns_as_songs)
 
-[Project page on Space Apps| https://www.spaceappschallenge.org/2023/find-a-team/solar-sounds/?tab=details]
+Project page on Space Apps: [https://www.spaceappschallenge.org/2023/find-a-team/solar-sounds/?tab=details]
