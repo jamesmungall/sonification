@@ -1,0 +1,11 @@
+name: spaceapps-mo-immersed-sounds-space
+channels:
+ - conda-forge
+dependencies:
+ - python
+ - numpy
+ - matplotlib
+ - jupyterlab
+ - pandas
+ - sunpy
+ - pywavelets
