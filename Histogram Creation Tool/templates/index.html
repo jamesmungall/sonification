@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sonify Your Sun!</title>
+    <link rel="shortcut icon" href="favicon.ico" type="☀️"><link rel="shortcut icon" href="favicon.ico" type="☀️">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-color: rgb(31, 31, 172);
+        }
+        h1 {
+            font-family: 'Righteous', cursive;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 600px;
+        }
+        .histogram-container {
+            width: 100%; 
+            display: flex;
+            justify-content: center; 
+            padding: 20px 0; 
+        }
+        .histogram {
+            width: 80%;
+            margin-top: 20px;
+        }
+        .pixel-values-container {
+            width: 80%;
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-1">Sonify Your Sun! ☀️ </h1>
+        <p>Import an image of a solar image  of the sun below.</p>
+        <form method="POST" enctype="multipart/form-data" class="text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-9 text-center">
+                    <input type="file" name="image" accept=".jpg, .jpeg, .png">
+                </div>
+            </div>
+            <br>
+            <input type="submit" value="Upload Image">
+        </form>
+        <p>Accepted formats: png, jpeg, jpg</p>
+
+        <br>
+
+        {% if show_download %}
+        <div class="histogram-container">
+            <div class="histogram" style="height: {{ value }}px;">
+                <h2>Pixel Value Histogram:</h2>
+                <img src="{{ url_for('static', filename='histogram.png') }}" alt="Histogram of Pixel Values" class="img-fluid">
+            </div>
+        </div>
+
+        <p>Download a CSV file of the output here:</p>
+
+        <a href="{{ url_for('download') }}" download="pixel_values.csv">
+            <input type="button" value="Download">
+        </a> 
+        <br>
+        <div class="pixel-values-container">
+            <h2>Pixel Values:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pixel Value</th>
+                        <th>Frequency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for value in hist %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ value }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
