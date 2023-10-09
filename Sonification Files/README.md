@@ -9,9 +9,9 @@ Second attempt used python script (pix_vals to frequencies.py) to count number o
 
 There are three tracks playing simultaneously for each image:
 
-Piano - this represents brighter parts of the image
-Timpani - this represents the darker parts of the image
-Cymbal - this represents the greys.
+* Piano - this represents brighter parts of the image
+* Timpani - this represents the darker parts of the image
+* Cymbal - this represents the greys.
 
 Final video is 'James Solar Sonification.mp4'
 
