@@ -1,8 +1,16 @@
+SOLAR SIMULATION, Benjy
+
+
+References:
 https://www.solarsystemscope.com
 
 https://assetstore.unity.com/packages/2d/textures-materials/milky-way-skybox-94001
 
 https://nssdc.gsfc.nasa.gov/planetary/factsheet/
+
+-----------------------------------------------------------------------------------------------------
+
+These scripts are the main c # scripts controlling the Unity 3D simulation:
 
 camera.cs is the script that moves the camera through the solar system and changes the time scale.
 
