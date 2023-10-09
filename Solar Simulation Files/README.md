@@ -8,4 +8,4 @@ camera.cs is the script that moves the camera through the solar system and chang
 
 planet_generator.cs is the script that instantiates the planet prefabs 8 times for 8 planets.
 
-planet.cs is the script that calculates its position using the parameters orbit_time, orbit_distance and diameter from nasa planetary data.
+planet.cs is the script that calculates its position using the parameters orbit_time, orbit_distance and diameter from nasa planetary data. This script also adds the correct material to the object, plays the correct audio source and creates a trail behind it. 
